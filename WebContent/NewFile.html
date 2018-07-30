@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="NewFile.css" rel="stylesheet" type="text/css"> 
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<p> heloo : hiii</p>
+<script >
+var para = document.querySelector('p');
+para.addEventListener('click', updateName);
+
+function updateName() {
+  var name = prompt('Enter a new name');
+  para.textContent = 'Player 1: ' + name;
+}
+</script>
+</body>
+</html>

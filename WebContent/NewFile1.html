@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+function x() {
+  y = 1;   // Throws a ReferenceError in strict mode
+  var z = 2;
+}
+
+x();
+
+console.log(y); // logs "1" 
+console.log(z); 
+</script>
+</body>
+</html>
