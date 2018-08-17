@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+  var currentDate = new Date();
+      month = currentDate.getMonth();
+      date=currentDate.getDate();
+      day = currentDate.getDay();
+      year = currentDate.getFullYear();
+      var cmonth,cday;
+      switch(month)
+      {
+      case 1:cmonth="Jan";
+      		  break;
+      case 2:cmonth="Feb";
+		  		break;
+      case 3:cmonth="March";
+		  break;
+      case 4:cmonth="April";
+		  break;
+      case 5:cmonth="May";
+		  break;
+      case 6:cmonth="Jun";
+		  break;
+      case 7:cmonth="Jul";
+		  break;
+      case 8:cmonth="Aug";
+		  break; 
+	  case 9:cmonth="Sep";
+  		  break;
+	  case 10:cmonth="Oct";
+  		  break;
+	  case 11:cmonth="Nov";
+  		  break; 
+  	  case 12:cmonth="Dec";
+  		  break;
+      }
+      switch(day)
+      {
+      case 1:cday="Sun";
+      		  break;
+      case 2:cday="Mon";
+		  		break;
+      case 3:cday="Tues";
+		  break;
+      case 4:cday="Wed";
+		  break;
+      case 5:cday="Thu";
+		  break;
+      case 6:cday="Fri";
+		  break;
+      case 7:cday="Sat";
+		  break;
+      
+      }
+      
+  // Output the date to the above HTML element
+document.write(cday+","+date+""+cmonth+","+year);
+</script>
+</body>
+</html>

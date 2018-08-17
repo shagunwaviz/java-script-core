@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script>
+// Wait for DOM to load
+document.addEventListener("DOMContentLoaded", function(event) {
+
+  // Put the button into a variable
+  var e = document.getElementById("go");
+  
+  // Wait for user to click the button
+  e.addEventListener("click", function() {
+    
+    var redirectURL = document.getElementById("url").value;
+    var redirectDelay = document.getElementById("delay").value;
+    
+    // Do the timed redirect
+    window.setTimeout(function(){
+        location.href = redirectURL;
+    }, redirectDelay);    
+    
+  }, false);
+  
+});
+</script>
+
+<!-- Replace '{action page}' with your own action page to support non-JavaScript users -->
+<form name="myForm" action="{action page}">
+  <input name="url" id="url" value="https://www.quackit.com">
+  <input name="delay" id="delay" type="number" value="1500">
+  <input name="go" id="go" type="button" value="Go">
+</form>
+</body>
+</html>

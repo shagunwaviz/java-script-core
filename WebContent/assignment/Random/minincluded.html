@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<p id="msg"></p>
+
+<script>
+  function getRandomIntExcludeMax(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)+1) + min;
+  }
+  
+  document.getElementById("msg").innerHTML = getRandomIntExcludeMax(1, 100);
+</script>
+</body>
+</html>
