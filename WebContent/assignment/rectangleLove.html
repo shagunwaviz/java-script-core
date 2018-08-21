@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+const myRectangle1= {
+
+		  leftX1:1,
+		  bottomY1:1,
+		};
+const myRectangle2={
+
+		  leftX2:1,
+		  bottomY2:1,
+
+		};
+function overlap()
+{
+    // If one rectangle is on left side of other
+    if (l1.x > r2.x || l2.x > r1.x)
+        return false;
+ 
+    // If one rectangle is above other
+    if (l1.y < r2.y || l2.y < r1.y)
+        return false;
+ 
+    return true;
+}
+ 
+/* Driver program to test above function */
+int main()
+{
+    Point l1 = {0, 10}, r1 = {10, 0};
+    Point l2 = {5, 5}, r2 = {15, 0};
+    if (doOverlap(l1, r1, l2, r2))
+        printf("Rectangles Overlap");
+    else
+        printf("Rectangles Don't Overlap");
+    return 0;
+}
+</script>
+</body>
+</html>

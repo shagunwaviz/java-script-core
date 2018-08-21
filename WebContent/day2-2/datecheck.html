@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+var date=prompt("enter date",'March 13, 08 04:20');
+var birthday = new Date(date);
+var m=prompt("enter yours choice:1-day,2-date,3-hours,4-minutes");
+var x=parseInt(m);
+switch(x)
+{
+case 1:var z=birthday.getDay();
+		if(z==0)
+			alert("sunday");
+		if(z==1)
+			alert("monday");
+		if(z==2)
+			alert("tuesday");
+		if(z==3)
+			alert("wednesday");
+		if(z==4)
+			alert("thursday");
+		if(z==5)
+			alert("friday");
+		if(z==6)
+			alert("saturday");
+		break;
+case 2:alert(birthday.getDate());
+		break;
+case 3:alert(birthday.getHours());
+		break;
+case 4:alert(birthday.getMinutes());
+		break;
+
+}
+
+</script>
+</body>
+</html>

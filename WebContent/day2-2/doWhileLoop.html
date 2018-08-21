@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> do while example</title>
+</head>
+<body>
+<h3>Using Query Selector</h3>
+<p></p>
+<h2>Using document.write()</h2>
+<script type="text/javascript">
+var i =0;
+var result = '';
+do{
+	i++;
+	document.write(i);
+	document.write(" ");
+	result += i + " ";
+	var print = document.querySelector('p');
+	print.textContent = result;
+
+}
+while(i<8);
+/* var print = document.querySelector('p');
+print.textContent = result;
+ */
+
+</script>
+</body>
+</html>

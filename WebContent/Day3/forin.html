@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script >
+var arr = [3, 5, 7];
+for (var i in arr) {
+   document.write(i); // logs "0", "1", "2"
+}
+
+for (var i of arr) {
+   document.write(i); // logs 3, 5, 7
+}
+</script>
+</body>
+</html>

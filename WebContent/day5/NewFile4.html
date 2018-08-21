@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+let User = class MyClass {
+	  sayHi() {
+	    alert(MyClass); // MyClass is visible only inside the class
+	  }
+	};
+
+	new User().sayHi(); // works, shows MyClass definition
+
+	alert(MyClass);
+</script>
+</body>
+</html>

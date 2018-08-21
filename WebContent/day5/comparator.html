@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+var number = 1,
+string = "1",
+bool = true;
+
+if(string === number)
+	document.write("hii");
+//false
+
+if(string === number + "")
+	document.write("shagun");
+//true
+
+if(+string === number)
+	document.write(",welcome");
+//true
+
+if(bool === number)
+	document.write("to");
+//false
+
+if(+bool === number)
+	document.write("the");
+//true
+
+if(bool === string)
+	document.write("office");
+//false
+
+if(bool === !!string)
+	document.write("dear");
+</script>
+</body>
+</html>

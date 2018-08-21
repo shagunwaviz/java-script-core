@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width">
+ <title>JS Bin</title>
+</head>
+<body>
+<script>
+function check(){
+ var a=20;
+ let b=30;
+ const c=40;
+ if(true){
+   a=120;
+   b=130;
+ //c=30;
+   alert("inside if Condition "+'a='+a+" b="+b+' c='+c);
+ }
+   alert("outside if condition "+'a='+a+" b="+b+' c='+c);
+}
+check();
+ 
+ /*function reCheck(){
+ var a=20;
+ let b=30;
+ const c=40;
+ if(true){
+   var a=120;
+   let b=130;
+   const c= 140;
+   alert("inside if Condition in reCheck() ");
+   alert('a='+a+" b="+b+' c='+c);
+ }
+ alert("outside if condition in reCheck() ");
+ alert('a='+a+" b="+b+' c='+c);
+}
+reCheck();*/
+ </script></body>
+</html>

@@ -1,0 +1,30 @@
+
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width">
+ <title>JS Bin</title>
+</head>
+<body>
+<script>
+var hoist1,h1;
+hoist = 200; h=20;
+alert(2+h);
+function check(){
+ var hoist ;
+ let h;
+ console.log(h);
+ hoist1 = 200; h1=20;
+ alert("Hi im inside function body hoist=  "+hoist);
+ alert("Hi im inside function body hoist=  "+h);
+ 
+ alert("Hi im inside function body hoist1=  "+hoist1);
+ alert("Hi im inside function body h1=  "+h1);
+}
+check();
+alert("Hi im outside function body  hoist=  "+hoist);
+alert("Hi im outside function body hoist=  "+h);
+alert("Hi im outside function body hoist1=  "+hoist1);
+ alert("Hi im outside function body h1=  "+h1);
+</script></body>
+</html>

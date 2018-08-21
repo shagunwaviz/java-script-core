@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<script>
+
+    var name = prompt("Please enter your name", "XYZ");
+    var age=prompt("Please enter your age", "0");
+    var std=prompt("please enter your class","10th");
+    var mark1=prompt("please enter your marks of english");
+    var mark2=prompt("please enter your marks of maths");
+    var mark3=prompt("please enter your marks of hindi");
+    var m1=parseInt(mark1);
+    var m2=parseInt(mark2);
+    var m3=parseInt(mark3);
+    var avg=(m1+m2+m3)/3;
+    var grade;
+    if(avg>=60&&avg<=100)
+    	{
+    		grade='A';
+    	}
+    else if(avg>=45&&avg<60)
+	{
+		grade='B';
+	}
+    else if(avg>=33&&avg<45)
+	{
+		grade='C';
+	}
+    else
+    	{
+    		grade='FAIL';
+    	}
+    window.alert(name + ' of ' + age + ' from ' + std + ', Your average marks are' + avg +' and your grade is'+grade);
+
+</script>
+</body>
+</html>

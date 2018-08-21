@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>XYZ Bank</title>
+</head>
+<body onload ="bank()">
+
+<script>
+function bank(){
+	//alert("sdfj");
+	var runame="shagun";
+		var acctno;
+		var branch,bal;
+		var bankname=prompt("enter your Bank Name");;
+		
+		var uname=prompt("enter your username");
+		if(runame==uname)
+			{
+				branch=prompt("enter your branch");
+				acctno=prompt("enter your account no");
+				bal=prompt("enter your current amount");
+				
+			}
+		else
+			{
+			window.alert("not a valid username!!!....Try Again");
+			}
+
+	
+}
+function ViewBalance()
+{
+	document.getElementById("demo1").innerHTML = bal;
+}
+function withdraw()
+{
+	var withdraw=prompt("enter the amount to be withdrawnn");
+	if(bal<withdraw)
+		window.alert("insufficient amount");
+	else
+	bal=bal-withdraw;
+	document.getElementById("demo1").innerHTML = "amount left in your account "+ bal + "amount withdrwan "+withdraw;
+}
+function deposit()
+{
+	var deposit=prompt("enter the amount to be deposited");
+	bal=bal+deposit;
+	document.getElementById("demo1").innerHTML = "total balance of your account"+bal;
+}
+function windowClose() {
+	window.open('','_parent','');
+	window.close();
+	}
+</script>
+<button onclick="ViewBalance()">View Balance</button>
+<button onclick="withdraw()">Withdraw</button>
+<button onclick="deposit()">Deposit</button>
+<button onclick="windowClose()">Quit</button>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+</body>
+</html>

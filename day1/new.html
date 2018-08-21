@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script >
+var x = 0;
+alert(typeof z);// z does not exist so undefined result
+function a(){
+ var  y = 20;
+ 
+ alert("y=="+y+"  in side a() value of x = "+x);
+function b(){
+ x = 10;
+   y = 20;
+   z = 30;
+   
+}
+  b(); // caling for create z is gloable variable
+ 
+ alert("calling b()");
+ alert("inside a() x= " +x+ " y== "+y+" z= "+z);
+
+}
+//console.logh(x  , y);// y is undifiend
+a();
+alert(x,z);
+alert(typeof z);
+</script>
+</body>
+</html>

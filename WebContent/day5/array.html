@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+var array = [ "a", "b", "c" ];
+
+document.write(!!~array.indexOf("a"));
+// true
+
+document.write(!!~array.indexOf("b"));
+// true
+
+document.write(!!~array.indexOf("c"));
+// true
+
+documment.write(!!~array.indexOf("d"));
+// false
+
+// Note that the above should be considered "unnecessarily clever"
+// Prefer the obvious approach of comparing the returned value of
+// indexOf, like:
+
+if ( array.indexOf( "a" ) >= 0 ) {
+ document.write("dfh");
+}
+</script>
+</body>
+</html>
