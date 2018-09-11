@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Getting Started with JavaScript</title>
+<h2 align="center">Accordian Example</h2>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    body, .jumbotron { padding: 30px; }
+    html      {
+      overflow-y: scroll;
+    }
+    body      {
+      background: #FFC0CB;
+    }
+    ul        {
+      margin-bottom: 0;
+    }
+    .accordion  {
+      background: #B0C4DE;
+      border-radius: 5px;
+      padding: 30px;
+    }
+
+    .question {
+      border-top: 1px solid #EEE;
+      padding: 20px;
+      cursor: pointer;
+      position: relative;
+    }
+    .question h2  {
+      font-size: 20px;
+      margin: 0;
+      color: #C00C00;
+    }
+    .question .glyphicon {
+      position: absolute;
+      right: 20px;
+      top: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      color: #C00C00;
+      
+    }
+
+    .answer   {
+      max-height: 0;
+      overflow: hidden;
+      background-color: crimson
+    }
+    .answer p {
+      padding: 20px;
+    }
+
+   
+    .accordion li.open .answer  {
+      max-height: 150px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="accordion">
+    <ul class="list-unstyled">
+      <li class="open">
+        <div class="question">
+          <h2>Shagun Arora</h2>
+          <span class="glyphicon glyphicon-chevron-down"></span>
+        </div>
+        <div class="answer">
+          <p style="color: aliceblue">developer at waviz technologies, working hard these days.</p>
+        </div>
+      </li>
+      <li>
+        <div class="question">
+          <h2>Banasthali Vidyapeeth</h2>
+          <span class="glyphicon glyphicon-chevron-down"></span>
+        </div>
+        <div class="answer">
+          <p style="color: aliceblue">Banasthali Vidyapith aims at the synthesis of spiritual values and scientific achievements of both the East and the West. Its educational programme is based on the concept of "Panchmukhi Shiksha" and aims at all round harmonious development of personality. </p>
+        </div>
+      </li>
+      <li>
+        <div class="question">
+          <h2>About Waviz</h2>
+          <span class="glyphicon glyphicon-chevron-down"></span>
+        </div>
+        <div class="answer">
+          <p style="color: aliceblue">Waviz Technologies (P) Ltd is an emerging Application Software Development and Outsourcing Company located in India and working around the globe. </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+</div>
+  <script>
+    var accordion = document.querySelector('.accordion');
+    var items     = accordion.querySelectorAll('li');
+    var questions = accordion.querySelectorAll('.question');
+
+    function toggleAccordion() {
+       thisItem = this.parentNode;
+
+      items.forEach(function(item) {
+        if (thisItem == item) {
+          thisItem.classList.toggle('open');   
+          return;
+        }
+
+        item.classList.remove('open');
+      });         
+    }
+
+    questions.forEach(function(question){ question.addEventListener('click', toggleAccordion)});
+  </script>
+</body>
+</html>
